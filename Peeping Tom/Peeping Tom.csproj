@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net6-windows</TargetFramework>
+        <TargetFramework>net7-windows</TargetFramework>
         <RootNamespace>PeepingTom</RootNamespace>
         <Version>1.7.13</Version>
         <LangVersion>latest</LangVersion>
@@ -13,7 +13,7 @@
         <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
     </PropertyGroup>
     <PropertyGroup>
-        <DalamudLibPath>E:\GitHubDesktop\Dalamud 7.3.5.0\bin\Release</DalamudLibPath>
+        <DalamudLibPath>E:\GitHubDesktop\dohwacorp\Dalamud\bin\Release</DalamudLibPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))'">
         <DalamudLibPath>$(DALAMUD_HOME)</DalamudLibPath>
@@ -22,7 +22,7 @@
         <DalamudLibPath>$(HOME)/dalamud</DalamudLibPath>
     </PropertyGroup>
     <ItemGroup>
-        <EmbeddedResource Include="Resources\target.wav" />
+        <EmbeddedResource Include="Resources\target.wav"/>
         <EmbeddedResource Update="Resources\Language.resx">
             <Generator>ResXFileCodeGenerator</Generator>
             <LastGenOutput>Language.Designer.cs</LastGenOutput>
@@ -51,15 +51,15 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="DalamudPackager" Version="2.1.10" />
-        <PackageReference Include="Fody" Version="6.6.4" PrivateAssets="all" />
-        <PackageReference Include="NAudio.Core" Version="2.1.0" />
-        <PackageReference Include="NAudio.Wasapi" Version="2.1.0" />
-        <PackageReference Include="Resourcer.Fody" Version="1.8.0" PrivateAssets="all" />
-        <PackageReference Include="XivCommon" Version="6.0.2" />
+        <PackageReference Include="DalamudPackager" Version="2.1.10"/>
+        <PackageReference Include="Fody" Version="6.6.4" PrivateAssets="all"/>
+        <PackageReference Include="NAudio.Core" Version="2.1.0"/>
+        <PackageReference Include="NAudio.Wasapi" Version="2.1.0"/>
+        <PackageReference Include="Resourcer.Fody" Version="1.8.0" PrivateAssets="all"/>
+        <PackageReference Include="XivCommon" Version="7.0.0-alpha.1"/>
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\Peeping Tom.Ipc\Peeping Tom.Ipc.csproj" />
+        <ProjectReference Include="..\Peeping Tom.Ipc\Peeping Tom.Ipc.csproj"/>
     </ItemGroup>
     <ItemGroup>
         <Compile Update="Resources\Language.Designer.cs">
